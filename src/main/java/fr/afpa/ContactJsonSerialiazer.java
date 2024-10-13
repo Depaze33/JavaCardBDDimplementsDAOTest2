@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.List;
 
 public class ContactJsonSerialiazer implements Serializer<Contact> {
 
@@ -22,22 +23,19 @@ public class ContactJsonSerialiazer implements Serializer<Contact> {
 
     @Override
     public void saveList(String filePath, ArrayList<Contact> objectToSave) throws IOException {
+
         // writerWithDefaultPrettyPrinter add indentation & breaklines
         String contact = null;
 
 
-        mapper.writerWithDefaultPrettyPrinter().writeValue(new File(filePath), objectToSave);
+        mapper.writerWithDefaultPrettyPrinter().writeValue(new File(filePath), listerContactDTO(objectToSave));
     }
 
-    public ArrayList<Object> listerContactDTO(ArrayList<Contact> contacts) {
-        ArrayList<Object> listeContactDTO = new ArrayList<>();
+    public List<ContactDTO> listerContactDTO(ArrayList<Contact> contacts) {
+        List<ContactDTO> listeContactDTO = new ArrayList<>();
 
         for (Contact contact : contacts) {
-            ContactDTO contactDTO = new ContactDTO(contact.getLastName(), contact.getFirstName(),
-                    contact.getGender(), contact.getBirthDate(), contact.getPseudo(),
-                    contact.getPrivateNumber(), contact.getProfessionalNumber(), contact.getMailAdress(),
-                    contact.getPostalAdress(),
-                    contact.getGithub(), contact.getId());
+            ContactDTO contactDTO = newContactDTO(contact);
 
             listeContactDTO.add(contactDTO);
         }
