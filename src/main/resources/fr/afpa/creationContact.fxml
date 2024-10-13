@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.afpa.CreationContactController">
+   <center>
+      <VBox fx:id="centerPane" alignment="TOP_CENTER" prefHeight="730.0" prefWidth="566.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="186.0" styleClass="titleBtn" text="CONTACTS" />
+            <Label fx:id="requiredLabel" prefHeight="20.0" prefWidth="120.0" styleClass="labelRequired" stylesheets="@style.css" text="* Required fields" textFill="#c43434" />
+            <VBox fx:id="contactInfosVBox" alignment="TOP_CENTER">
+               <children>
+                  <GridPane fx:id="contactGridPane" alignment="TOP_CENTER" maxWidth="500.0" prefWidth="500.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.59996337890624" minWidth="20.0" prefWidth="160.7999755859375" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="55.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="55.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="55.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="55.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="55.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="55.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="55.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="55.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="55.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="55.0" vgrow="SOMETIMES" />
+                        <RowConstraints />
+                    </rowConstraints>
+                     <children>
+                     
+                        <Label fx:id="lastNameLabel" contentDisplay="RIGHT" minWidth="-Infinity" prefHeight="20.0" prefWidth="150.0" text="Last Name">
+                           <graphic>
+                              <Label contentDisplay="RIGHT" styleClass="star" text="*" />
+                           </graphic></Label>
+                        <Label fx:id="firstNameLabel" contentDisplay="RIGHT" minWidth="-Infinity" prefHeight="20.0" prefWidth="150.0" text="First Name" GridPane.rowIndex="1">
+                           <graphic>
+                              <Label contentDisplay="RIGHT" styleClass="star" text="*" />
+                           </graphic></Label>
+                        <Label fx:id="genderLabel" contentDisplay="RIGHT" minWidth="-Infinity" prefHeight="20.0" prefWidth="150.0" text="Gender" GridPane.rowIndex="2">
+                           <graphic>
+                              <Label contentDisplay="RIGHT" styleClass="star" text="*" />
+                           </graphic></Label>
+                        <Label fx:id="birthDayLabel" minWidth="-Infinity" prefWidth="150.0" text="Birdthday" GridPane.rowIndex="3" />
+                        <Label fx:id="pseudoLabel" minWidth="-Infinity" prefWidth="150.0" text="Pseudo" GridPane.rowIndex="4" />
+                        <Label fx:id="personalPhoneLabel" contentDisplay="RIGHT" minWidth="-Infinity" prefWidth="150.0" text="Personal Phone" GridPane.rowIndex="5">
+                           <graphic>
+                              <Label contentDisplay="RIGHT" styleClass="star" text="*" />
+                           </graphic></Label>
+                        <Label fx:id="proffesionalPhoneLabel" minWidth="-Infinity" prefHeight="26.0" prefWidth="165.0" text="Professionnal Phone " GridPane.rowIndex="6" />
+                        <Label fx:id="mailLabel" contentDisplay="RIGHT" minWidth="-Infinity" prefWidth="150.0" text="Mail Adress" GridPane.rowIndex="7">
+                           <graphic>
+                              <Label contentDisplay="RIGHT" styleClass="star" text="*" />
+                           </graphic></Label>
+                        <Label fx:id="postalAdressLabel" contentDisplay="RIGHT" minWidth="-Infinity" prefWidth="150.0" text="Postal Adress" GridPane.rowIndex="8">
+                           <graphic>
+                              <Label contentDisplay="RIGHT" styleClass="star" text="*" />
+                           </graphic></Label>
+                        <Label fx:id="gitLinkLabel" minWidth="-Infinity" prefWidth="150.0" text="Git link" GridPane.rowIndex="9" />
+                        <TextField fx:id="lastNameTextField" prefWidth="378.0" promptText="Last Name" styleClass="textField" stylesheets="@style.css" GridPane.columnIndex="1" />
+                        <TextField fx:id="firstNameTextField" prefWidth="233.0" promptText="First Name" styleClass="textField" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="pseudoTextField" promptText="pseudo" styleClass="textField" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="personalNumberTextField" promptText="0606060606" styleClass="textField" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="professionalTextField" promptText="0606060606" styleClass="textField" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="mailAddressTextField" promptText="test@test.domain" styleClass="textField" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="postalAddressTextField" promptText=" 38 rue de la mer 33950 Lège-Cap-Ferret" styleClass="textField" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <TextField fx:id="gitTextField" promptText="https://github.com/yourpseudo" styleClass="textField" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <ComboBox fx:id="comboBoxGender" prefWidth="300.0" promptText="Gender" styleClass="comboBoxGender" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <DatePicker fx:id="birthDayTextField" prefHeight="38.0" prefWidth="1000.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+   <left>
+      <fx:include source="nav.fxml" />
+   </left>
+   <right>
+      <GridPane fx:id="buttonGridPane" alignment="CENTER" prefHeight="768.0" prefWidth="250.0" style="-fx-background-color: #CDBFBF;" styleClass="gridPaneControler" stylesheets="@style.css" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="123.99998779296875" minHeight="10.0" prefHeight="102.99999694824218" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="83.20000915527345" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="77.19998779296876" minHeight="55.0" prefHeight="55.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="62.60001220703123" minHeight="10.0" prefHeight="52.599999999999966" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="59.39999999999998" minHeight="10.0" prefHeight="54.39999999999998" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="57.79998168945315" minHeight="10.0" prefHeight="42.39996337890625" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="36.399987792968716" minHeight="10.0" prefHeight="25.60003662109375" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="116.60001220703123" minHeight="10.0" prefHeight="90.00004882812505" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="102.39999999999998" minHeight="10.0" prefHeight="88.99997558593748" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="90.80002441406248" minHeight="10.0" prefHeight="37.80002441406248" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="43.60001220703123" minHeight="5.999975585937477" prefHeight="35.400012207031295" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="buttonExportJson" alignment="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Export JSON 📄" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="exportButton" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </Button>
+            <Button fx:id="buttonExportVCard" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="Export VCard 📇 " GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="exportButton" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </Button>
+            <Button fx:id="buttonEdit" mnemonicParsing="false" onAction="#editContact" prefHeight="40.0" prefWidth="150.0" stylesheets="@style.css" text="Edit ✎" GridPane.rowIndex="10">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="deleteEditButton" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </Button>
+            <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#persistContact" prefHeight="40.0" prefWidth="150.0" stylesheets="@style.css" text=" Save 🖫" textFill="#fffefe" GridPane.rowIndex="14">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="saveButton" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </Button>
+            <Button fx:id="buttonDelete" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" stylesheets="@style.css" text="Delete ❌" GridPane.rowIndex="13">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <styleClass>
+                  <String fx:value="deleteEditButton" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </Button>
+         </children>
+      </GridPane>
+   </right>
+</BorderPane>

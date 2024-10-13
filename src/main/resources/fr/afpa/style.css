@@ -1,0 +1,354 @@
+/* :root{
+    -fx-bgLeft: #cec0c0bd;
+    -fx-bgCenter: #CDBFBF;
+} */
+
+
+* {
+    -fx-bgLeft: #cec0c0bd;
+    -fx-bgCenter: #CDBFBF;
+    -fx-font-size: 16px;
+
+    -fx-primary-color: #6D4646;
+    -fx-secondary-color: #31111D;
+    -fx-light-grey-color: #CDBFBF;
+
+    -fx-focus-color: -fx-secondary-color;
+}
+
+.btn {
+    -fx-cursor: hand;
+}
+
+.btn:disabled {
+    -fx-cursor: null;
+    -fx-background-color: #6b6b6b;
+    -fx-text-fill: rgb(32, 32, 32);
+}
+
+
+.textField:disabled {
+    -fx-cursor: null;
+    -fx-background-color: #9d9d9d16;
+    -fx-text-fill: rgb(0, 0, 0);
+}
+
+/* ======= NAV ======== */
+#leftPane {
+    -fx-background-color: -fx-bgLeft;
+}
+
+#coffe {
+    -fx-padding: 10 10 10 10;
+    -fx-font-size: 25;
+    -fx-text-fill: #6D4646;
+}
+
+#btnNavPane {
+    -fx-pref-height: 480;
+    -fx-alignment: center;
+}
+
+.navBtn {
+    -fx-background-color: #6D4646;
+    -fx-text-fill: white;
+    -fx-pref-width: 220;
+    -fx-pref-height: 80;
+}
+
+
+
+/* ======= CONTENT ======== */
+
+#centerPane {
+    -fx-background-color: #CDBFBF;
+    -fx-alignment: top-center;
+    -fx-padding: 10 10 10 10;
+}
+
+.saveButton {
+    -fx-background-color: #31111D;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 5px;
+    -fx-text-fill: white;
+
+}
+
+.deleteEditButton {
+    -fx-background-color: #6D4646;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 5px;
+    -fx-text-fill: white;
+}
+
+.exportButton {
+    -fx-background-color: linear-gradient(to right, #6D4646, #49292D);
+    ;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 5px;
+    -fx-text-fill: white;
+}
+
+.titleBtn {
+    -fx-background-color: #31111D;
+    -fx-text-fill: white;
+    -fx-pref-width: 220;
+    -fx-pref-height: 80;
+    -fx-font-size: 20px;
+
+}
+
+#requiredLabel {
+    -fx-text-fill: rgb(188, 17, 17);
+}
+
+.comboBoxGender {
+    -fx-background-color: #6D4646;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-border-width: 5px;
+    -fx-text-fill: white;
+
+}
+
+.roundedBtn {
+    -fx-text-fill: white;
+    -fx-background-radius: 20px;
+}
+
+
+.textField {
+    -fx-background-color: #6D4646;
+    -fx-background-radius: 50px;
+    /* -fx-border-radius: 50px; */
+    -fx-border-width: 5px;
+    -fx-text-fill: white;
+}
+
+
+
+.delBtn {
+    -fx-background-color: linear-gradient(to bottom, #9d1c1ccf, #4b0909cf);
+
+}
+
+.selectAllBtn {
+    -fx-background-color: #6D4646;
+
+}
+
+.jsonBtn {
+    -fx-background-color: linear-gradient(to bottom, #a46868, #341f21);
+}
+
+.vcfBtn {
+    -fx-background-color: linear-gradient(to bottom, #a46868, #341f21);
+
+}
+
+.check-box:selected .box {
+
+    -fx-background-color: white;
+}
+
+.check-box .box {
+
+    -fx-background-color: white;
+}
+
+.check-box:selected .mark {
+
+    -fx-background-color: #6D4646;
+
+}
+
+.mainGridCheckbox {
+    -fx-padding: 0 5 0 2;
+}
+
+.mainGridTextElement {
+    -fx-text-fill: #6D4646;
+}
+
+.mainGridTextName {
+    -fx-font-weight: bold;
+    -fx-underline: true;
+    -fx-cursor: hand;
+}
+
+.search .scroll-pane {
+    -fx-background-color: transparent;
+}
+
+.search .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.search .scroll-pane .content {
+    -fx-background-color: transparent;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: -fx-primary-color;
+    -fx-background-radius: 0;
+}
+
+.date-picker .arrow-button:hover {
+    -fx-background-color: -fx-secondary-color;
+}
+
+.date-picker .arrow-button .arrow {
+    -fx-background-color: white;
+}
+
+.date-picker .cell {
+    -fx-background-color: white;
+}
+
+.date-picker .cell:hover {
+    -fx-background-color: -fx-light-grey-color;
+    -fx-text-fill: -fx-secondary-color;
+
+}
+
+.date-picker .cell:focused {
+    -fx-background-color: -fx-light-grey-color;
+}
+
+.date-picker .selected {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+
+.date-picker .selected:focused {
+    -fx-background-color: -fx-primary-color;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup {
+    -fx-border-color: transparent;
+}
+
+.date-picker-popup .month-year-pane {
+    -fx-background-color: -fx-primary-color;
+}
+
+.date-picker-popup .month-year-pane .label {
+    -fx-text-fill: white;
+}
+
+.date-picker-popup .week-number-cell {
+    -fx-text-fill: -fx-secondary-color;
+}
+
+.date-picker-popup .spinner .button .left-arrow,
+.date-picker-popup .spinner .button .right-arrow {
+    -fx-background-color: white;
+}
+
+.date-picker {
+    -fx-background-radius: 20 20 20 20;
+}
+
+.date-picker>.text-field {
+    -fx-background-radius: 20 0 0 20;
+}
+
+.date-picker>.arrow-button {
+    -fx-background-radius: 0 20 20 0;
+}
+
+
+.date-picker>.editor:disabled {
+    -fx-background-color: white;
+    -fx-opacity: 1.0;
+
+
+}
+
+.date-picker:disabled {
+    -fx-opacity: 0.4;
+}
+
+.date-picker>.date-picker-display-node:disabled {
+    -fx-opacity: 1.0;
+}
+
+.labelRequired {
+    -fx-text-fill: #c43434;
+}
+
+
+.comboBoxGender .list-cell {
+    -fx-text-fill: white;
+}
+
+.comboBoxGender .list-view .list-cell {
+    -fx-text-fill: black;
+}
+
+.star {
+    -fx-text-fill: rgb(205, 16, 16);
+}
+
+
+
+
+
+.scroll-pane .viewport {
+    -fx-background: #CDBFBF;
+}
+
+.scroll-bar:horizontal .track,
+.scroll-bar:vertical .track {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0.0em;
+    -fx-border-radius: 2.0em;
+}
+
+
+.scroll-bar:horizontal .increment-button,
+.scroll-bar:horizontal .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0.0em;
+    -fx-padding: 0.0 0.0 10.0 0.0;
+
+}
+
+.scroll-bar:vertical .increment-button,
+.scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0.0em;
+    -fx-padding: 0.0 10.0 0.0 0.0;
+
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0.15em 0.0;
+}
+
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:vertical .decrement-arrow {
+    -fx-shape: " ";
+    -fx-padding: 0.0 0.15em;
+}
+
+.scroll-bar:horizontal .thumb,
+.scroll-bar:vertical .thumb {
+    -fx-background-color: derive(black, 90.0%);
+    -fx-background-insets: 2.0, 0.0, 0.0;
+    -fx-background-radius: 2.0em;
+}
+
+.scroll-bar:horizontal .thumb:hover,
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: derive(#4D4C4F, 10.0%);
+    -fx-background-insets: 2.0, 0.0, 0.0;
+    -fx-background-radius: 2.0em;
+}
